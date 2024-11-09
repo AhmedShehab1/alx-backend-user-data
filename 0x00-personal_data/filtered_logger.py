@@ -6,6 +6,7 @@ import re
 import logging
 from typing import List
 import os
+from mysql.connector import MySQLConnection, connect
 
 
 def filter_datum(
@@ -61,13 +62,13 @@ class RedactingFormatter(logging.Formatter):
         return super(RedactingFormatter, self).format(record)
 
 
-def get_db():
+def get_db() -> MySQLConnection:
     """
     Uses ENV VAR To connect to a mysql db
     Returns:
         connector object
     """
-    conn = mysql.connector.connect(
+    conn = connect(
         host=os.getenv("PERSONAL_DATA_DB_HOST", "localhost"),
         user=os.getenv("PERSONAL_DATA_DB_USERNAME", "root"),
         password=os.getenv("PERSONAL_DATA_DB_PASSWORD", ""),
