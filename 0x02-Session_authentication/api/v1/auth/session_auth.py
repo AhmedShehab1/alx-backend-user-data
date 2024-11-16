@@ -3,7 +3,6 @@
 Session Authentication Module
 0x02-Session_authentication
 """
-
 from typing import TypeVar
 import uuid
 from models.user import User
@@ -15,7 +14,6 @@ class SessionAuth(Auth):
     Session Authentication Class
     0x02-Session_authentication
     """
-
     user_id_by_session_id = {}
 
     def create_session(self, user_id: str = None) -> str:
