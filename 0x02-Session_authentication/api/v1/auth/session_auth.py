@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
 Session Authentication Module
+
+
 """
 from typing import TypeVar
 import uuid
@@ -9,7 +11,9 @@ from api.v1.auth.auth import Auth
 
 
 class SessionAuth(Auth):
-    """Session Authentication Class"""
+    """Session Authentication Class
+    
+    """
 
     user_id_by_session_id = {}
 
