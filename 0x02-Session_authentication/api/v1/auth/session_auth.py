@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SessionAuth Module
+Session Authentication Module
 """
 from typing import TypeVar
 import uuid
@@ -9,7 +9,7 @@ from api.v1.auth.auth import Auth
 
 
 class SessionAuth(Auth):
-    """SessionAuth Class"""
+    """Session Authentication Class"""
 
     user_id_by_session_id = {}
 
@@ -56,6 +56,8 @@ class SessionAuth(Auth):
 
     def destroy_session(self, request=None):
         """Destroy Session Method
+           Returns:
+              _type_: _description_
         """
         if not request:
             return False
