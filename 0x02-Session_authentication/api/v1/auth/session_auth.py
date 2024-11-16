@@ -2,8 +2,8 @@
 """
 Session Authentication Module
 0x02-Session_authentication
-
 """
+
 from typing import TypeVar
 import uuid
 from models.user import User
@@ -11,7 +11,8 @@ from api.v1.auth.auth import Auth
 
 
 class SessionAuth(Auth):
-    """Session Authentication Class
+    """
+    Session Authentication Class
     0x02-Session_authentication
     """
 
@@ -59,7 +60,8 @@ class SessionAuth(Auth):
         return User.get(user_id)
 
     def destroy_session(self, request=None):
-        """Destroy Session Method
+        """
+           Destroy Session Method
            Returns:
               _type_: _description_
         """
