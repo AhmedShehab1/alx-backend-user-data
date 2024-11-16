@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Session Authentication Module
-
+0x02-Session_authentication
 
 """
 from typing import TypeVar
@@ -12,7 +12,7 @@ from api.v1.auth.auth import Auth
 
 class SessionAuth(Auth):
     """Session Authentication Class
-    
+    0x02-Session_authentication
     """
 
     user_id_by_session_id = {}
